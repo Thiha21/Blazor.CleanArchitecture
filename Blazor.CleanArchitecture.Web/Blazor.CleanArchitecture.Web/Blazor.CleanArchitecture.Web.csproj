@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MudBlazor" Version="6.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Blazor.CleanArchitecture.Application\Blazor.CleanArchitecture.Application\Blazor.CleanArchitecture.Application.csproj" />
+    <ProjectReference Include="..\..\Blazor.CleanArchitecture.Infrastructure\Blazor.CleanArchitecture.Infrastructure\Blazor.CleanArchitecture.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<PageTitle>Dashboard</PageTitle>
+<MudContainer Class="mt-6">
+    <div>
+        <MudChart ChartType="ChartType.Bar" ChartSeries="@Series" @bind-SelectedIndex="_lineChartIndex" XAxisLabels="@XAxisLabels" Width="100%" Height="350px"></MudChart>
+    </div>
+    <MudText Typo="Typo.h6">Selected portion of the chart: @_lineChartIndex</MudText>
+
+
+    <MudPaper Class="pa-4">
+        <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" @bind-SelectedIndex="_donutChartIndex" InputData="@data" InputLabels="@labels"></MudChart>
+    </MudPaper>
+    <MudPaper Class="pa-4 mt-2 d-flex justify-center">
+        <MudButton OnClick="AddDataSize" Variant="Variant.Filled" Color="Color.Primary">Add</MudButton>
+        <MudButton @onclick="RandomizeData" Variant="Variant.Filled" Class="mx-4">Randomize</MudButton>
+        <MudButton OnClick="RemoveDataSize" Variant="Variant.Filled" Color="Color.Secondary">Remove</MudButton>
+    </MudPaper>
+    <MudText Typo="Typo.h6">Selected portion of the chart: @_donutChartIndex</MudText>
+
+</MudContainer>
